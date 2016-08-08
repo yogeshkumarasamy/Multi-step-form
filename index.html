@@ -18,16 +18,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid content">
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-8">
-                <div class="right-section">
-                    <form>
-                    <div class="set1"> <!-- set1 contains first set of form content -->
-                    	<div class="form-group col-md-4">
+            <div class="col-md-4 left-section">
+                <h1>Registration for Online<br> Services</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta sequi, est pariatur nemo id, eum nesciunt quo vitae maiores!</p>
+            </div>
+            <div class="col-md-8 right-section">
+                <form>
+                    <div class="set1 row hide">
+                        <div class="col-md-12">
+                            <h1>PERSONAL INFORMATION<span>ALL FIELDS ARE REQUIRED</span></h1>
+                        </div>
+                        <!-- set1 contains first set of form content -->
+                        <div class="form-group col-md-4">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                         </div>
@@ -80,9 +86,76 @@
                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                         </div>
                     </div>
-                        
-                    </form>
-                </div>
+                    <div class="set2 row hide">
+                        <!-- set2 contains first set of form content -->
+                        <div class="col-md-12">
+                            <h1>PERSONAL INFORMATION<span>ALL FIELDS ARE REQUIRED</span></h1>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputEmail1">DESIRED USER ID</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <!-- Add the extra clearfix for only the required viewport -->
+                        <div class="clearfix"></div>
+
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputEmail1">EMAIL</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputEmail1">CONFIRM EMAIL</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <a href="">CHANGE PASSWORD</a>
+                        </div>
+                        <div class="password hide">
+                            <div class="form-group col-md-6">
+                                <label for="exampleInputEmail1">CURRENT PASSWORD</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-md-6">
+                                <label for="exampleInputEmail1">PASSWORD</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="exampleInputEmail1">CONFIRM PASSWORD</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="set3 row">
+                        <!-- set2 contains first set of form content -->
+                        <div class="col-md-12">
+                            <h1>TERMS AND CONDITIONS</h1>
+                            <p>Please read and agree the these terms and conditions in order to register your account</p>
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control" rows="5" cols="10" id="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ullam, corporis assumenda nemo sit! Eum voluptates sequi architecto temporibus odio totam, eius voluptate incidunt maxime esse, dolorem laboriosam, aspernatur, quod at repellendus optio vel velit aut repudiandae labore. repellat inventore omnis maiores. Suscipit consectetur temporibus quibusdam accusamus sapiente sint at. Est illum fugit odit totam itaque. Molestiae saepe qui at doloribus. Necessitatibus libero tempore dicta officiis illo sequi doloremque explicabo, quos ullam, earum sed quisquam dolore omnis optio labore vero atque maxime, harum repellat maiores nam eligendi ducimus at! Dolores at, ullam esse distinctio obcaecati error ipsam nostrum, minima incidunt voluptatum, libero nemo! Sed ipsa nesciunt hic assumenda doloremque aliquid aliquam eveniet soluta eum natus quos eligendi esse quaerat autem consequatur, praesentium possimus velit. Repellendus qui ea ab maxime odit. Aspernatur ratione dicta veniam obcaecati excepturi eius harum fugit ut perferendis. Necessitatibus repellat optio officiis ab, alias aut error delectus sint? Mollitia consectetur ullam eos deserunt, possimus quidem dignissimos quod, id repellendus minima, suscipit illo officiis in libero esse perspiciatis natus nostrum laudantium sit. Iste dolorum, odio aperiam repellendus enim amet eos maxime provident, sed id, quia quasi ullam corporis aut voluptatum veniam ipsum numquam. Dicta facere voluptatum reiciendis id.</textarea>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> I Agree to Terms & Conditions
+                            </label>
+                            <p>
+                                <button type="button" class="btn btn-primary btn-lg">Register Account</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <div class="right">
+                            <button type="submit">PROCEED</button>
+                            <div class="box"></div>
+                        </div>
+                        <div class="left">
+                            <button type="submit">BACK</button>
+                            <div class="box"></div>
+                        </div>
+
+                    </div>
+                </form>
             </div>
         </div>
     </div>
