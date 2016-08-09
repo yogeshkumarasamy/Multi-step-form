@@ -8,7 +8,9 @@
     <title>Accenture Assesment 01</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://rawgit.com/guillaumepotier/Parsley.js/2.4.3/src/parsley.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,7 +29,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta sequi, est pariatur nemo id, eum nesciunt quo vitae maiores!</p>
             </div>
             <div class="col-md-8 right-section">
-                <form>
+                <form class="multistep" data-parsley-validate="">
                     <div class="set row">
                         <div class="col-md-12">
                             <h1>PERSONAL INFORMATION<span>ALL FIELDS ARE REQUIRED</span></h1>
@@ -35,55 +37,57 @@
                         <!-- set1 contains first set of form content -->
                         <div class="form-group col-md-4">
                             <label for="exampleInputEmail1">FIRST NAME</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="fname" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="exampleInputEmail1">LAST NAME</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="lname" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="exampleInputEmail1">PHONE</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="phone" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleInputEmail1">TITLE</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="title" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleInputEmail1">COMPANY NAME</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="cname" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleInputEmail1">ADDRESS</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="address" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleInputEmail1">CITY</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="text" name="city" class="form-control" required="">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="exampleInputEmail1">STATE</label>
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <label for="state">STATE</label>
+                            <select class="form-control" required="">
+                                <option value="">Select State</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="Sydney">Sydney</option>
+                                <option value="Old Trafford">Old Trafford</option>
+                                <option value="Bulavayo">Bulavayo</option>
+                                <option value="New prio">New prio</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="exampleInputEmail1">COUNTRY</label>
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <label for="country">COUNTRY</label>
+                            <select class="form-control" required="">
+                                <option value="">Select Country</option>
+                                <option value="India">India</option>
+                                <option value="Australia">Australia</option>
+                                <option value="England">England</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="South Africa">South Africa</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="exampleInputEmail1">ZIPCODE</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <label for="zip">ZIPCODE</label>
+                            <input type="text" name="zip" class="form-control" required="">
                         </div>
                     </div>
                     <div class="set row">
@@ -93,37 +97,37 @@
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="exampleInputEmail1">DESIRED USER ID</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <label for="userid">DESIRED USER ID</label>
+                            <input type="email" class="form-control" name="userid" required="">
                         </div>
                         <!-- Add the extra clearfix for only the required viewport -->
                         <div class="clearfix"></div>
 
                         <div class="form-group col-md-6">
-                            <label for="exampleInputEmail1">EMAIL</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <label for="email">EMAIL</label>
+                            <input type="email" class="form-control" name="email" required="">
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="exampleInputEmail1">CONFIRM EMAIL</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <label for="cemail">CONFIRM EMAIL</label>
+                            <input type="email" class="form-control" name="cemail" required="">
                         </div>
                         <div class="form-group col-md-12">
-                            <a href="">CHANGE PASSWORD</a>
+                            <a href="" id="cpwd" title="Change Password">CHANGE PASSWORD</a>
                         </div>
                         <div class="password hide">
                             <div class="form-group col-md-6">
-                                <label for="exampleInputEmail1">CURRENT PASSWORD</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                <label for="current password">CURRENT PASSWORD</label>
+                                <input type="email" class="form-control" name="curpwd" required="" data-parsley-excluded>
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-md-6">
-                                <label for="exampleInputEmail1">PASSWORD</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                <label for="password">PASSWORD</label>
+                                <input type="email" class="form-control" name="pwd" required="" data-parsley-excluded>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="exampleInputEmail1">CONFIRM PASSWORD</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                <label for="confirm password">CONFIRM PASSWORD</label>
+                                <input type="email" class="form-control" name="conpwd" required="" data-parsley-excluded>
                             </div>
                         </div>
 
@@ -135,13 +139,13 @@
                             <p>Please read and agree the these terms and conditions in order to register your account</p>
                         </div>
                         <div class="col-md-12">
-                            <textarea class="form-control" rows="5" cols="10" id="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ullam, corporis assumenda nemo sit! Eum voluptates sequi architecto temporibus odio totam, eius voluptate incidunt maxime esse, dolorem laboriosam, aspernatur, quod at repellendus optio vel velit aut repudiandae labore. repellat inventore omnis maiores. Suscipit consectetur temporibus quibusdam accusamus sapiente sint at. Est illum fugit odit totam itaque. Molestiae saepe qui at doloribus. Necessitatibus libero tempore dicta officiis illo sequi doloremque explicabo, quos ullam, earum sed quisquam dolore omnis optio labore vero atque maxime, harum repellat maiores nam eligendi ducimus at! Dolores at, ullam esse distinctio obcaecati error ipsam nostrum, minima incidunt voluptatum, libero nemo! Sed ipsa nesciunt hic assumenda doloremque aliquid aliquam eveniet soluta eum natus quos eligendi esse quaerat autem consequatur, praesentium possimus velit. Repellendus qui ea ab maxime odit. Aspernatur ratione dicta veniam obcaecati excepturi eius harum fugit ut perferendis. Necessitatibus repellat optio officiis ab, alias aut error delectus sint? Mollitia consectetur ullam eos deserunt, possimus quidem dignissimos quod, id repellendus minima, suscipit illo officiis in libero esse perspiciatis natus nostrum laudantium sit. Iste dolorum, odio aperiam repellendus enim amet eos maxime provident, sed id, quia quasi ullam corporis aut voluptatum veniam ipsum numquam. Dicta facere voluptatum reiciendis id.</textarea>
+                            <textarea class="form-control" rows="5" cols="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ullam, corporis assumenda nemo sit! Eum voluptates sequi architecto temporibus odio totam, eius voluptate incidunt maxime esse, dolorem laboriosam, aspernatur, quod at repellendus optio vel velit aut repudiandae labore. repellat inventore omnis maiores. Suscipit consectetur temporibus quibusdam accusamus sapiente sint at. Est illum fugit odit totam itaque. Molestiae saepe qui at doloribus. Necessitatibus libero tempore dicta officiis illo sequi doloremque explicabo, quos ullam, earum sed quisquam dolore omnis optio labore vero atque maxime, harum repellat maiores nam eligendi ducimus at! Dolores at, ullam esse distinctio obcaecati error ipsam nostrum, minima incidunt voluptatum, libero nemo! Sed ipsa nesciunt hic assumenda doloremque aliquid aliquam eveniet soluta eum natus quos eligendi esse quaerat autem consequatur, praesentium possimus velit. Repellendus qui ea ab maxime odit. Aspernatur ratione dicta veniam obcaecati excepturi eius harum fugit ut perferendis. Necessitatibus repellat optio officiis ab, alias aut error delectus sint? Mollitia consectetur ullam eos deserunt, possimus quidem dignissimos quod, id repellendus minima, suscipit illo officiis in libero esse perspiciatis natus nostrum laudantium sit. Iste dolorum, odio aperiam repellendus enim amet eos maxime provident, sed id, quia quasi ullam corporis aut voluptatum veniam ipsum numquam. Dicta facere voluptatum reiciendis id.</textarea>
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="option1"> I Agree to Terms & Conditions
+                                <input type="checkbox" name="check" value="option1" required=""> I Agree to Terms & Conditions
                             </label>
-                            <p>
+                            <!-- <p>
                                 <button type="button" class="btn btn-primary btn-lg">Register Account</button>
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                     <div class="navigation">
@@ -165,6 +169,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Parsley  -->
+    <script src="https://rawgit.com/guillaumepotier/Parsley.js/2.4.3/dist/parsley.js"></script>    
     <script src="js/custom.js"></script>
 </body>
 
