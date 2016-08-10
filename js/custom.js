@@ -144,16 +144,42 @@ $(function() {
         var password = $(this).val();
         passwordCheck(password);
     });
+
+    $(".demo-form").on('submit', function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        //var form = $(this);
+
+        $(".demo-form").parsley().validate();
+
+        if ($(".demo-form").parsley().isValid()) {
+            // get all the inputs into an array.
+            var $inputs = $('.demo-form :input[type=text], .demo-form :input[type=password], .demo-form :input[type=email]');
+
+            // not sure if you wanted this, but I thought I'd add it.
+            // get an associative array of just the values.
+            var values = {};
+            $.each($('.demo-form').serializeArray(), function(i, field) {
+                values[field.name] = field.value;
+            });
+            //console.log(values);
+            localStorage.setItem('formData', JSON.stringify(values));
+            displayData();
+        }
+    });
+
+function displayData() {
+    setTimeout(localCheck, 1000);
+}
+function localCheck() {
+    var checkExisting = window.localStorage.getItem('formData')
+    if (typeof checkExisting !== 'undefined' && checkExisting !== null && curIndex() == 2) {
+    var retObj = JSON.parse(checkExisting);
+    $('.form-section').hide();
+    $('.navigation').hide();
+    $('#feedback').removeClass("hide");
+    $(".table tbody").append('<tr><th scope="row">1</th><td>'+ retObj.fname +'</td><td>'+ retObj.fname +'</td><td>'+ retObj.email +'</td></tr>');
+    }
+}
+
 });
-
-// on form submission
-        $('.demo-form').submit(function(e) {
-            // if is valid submit form
-            if ($(".demo-form").parsley().isValid()) {
-                var obj = $('.demo-form').serializeObject();
-                localStorage.setItem('test', JSON.stringify(obj));
-                return true;
-
-            }
-            e.preventDefault();
-        });
