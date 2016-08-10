@@ -162,7 +162,9 @@
 .set ul.parsley-errors-list li {
     display:none !important;
 }
-
+label.checkbox-inline.parsley-error {
+	background-color: red;
+}
 
 
 /*Small devices*/

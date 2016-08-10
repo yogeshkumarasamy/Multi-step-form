@@ -145,3 +145,15 @@ $(function() {
         passwordCheck(password);
     });
 });
+
+// on form submission
+        $('.demo-form').submit(function(e) {
+            // if is valid submit form
+            if ($(".demo-form").parsley().isValid()) {
+                var obj = $('.demo-form').serializeObject();
+                localStorage.setItem('test', JSON.stringify(obj));
+                return true;
+
+            }
+            e.preventDefault();
+        });
