@@ -32,14 +32,14 @@ $(function() {
 
     });
 
-    // Next button goes forward iff current block validates
+    // Next button goes forward if current block validates
     $('.form-navigation .next').click(function() {
         if ($('.demo-form').parsley().validate('block-' + curIndex())) {
             if ((curIndex() == 1)) {
                 //confirm email
                 var emailFields = $sections.filter('.current').find('input[type=email]')
                 if (!(emailFields[0].value == emailFields[1].value)) {
-                    alert("Email and confirm Email should be same!!");
+                    $("#dispError").text("Email and confirm Email should be same!!");
                     return;
                 }
                 if ($("#test input").attr("required")) {
@@ -47,7 +47,7 @@ $(function() {
                     //confirm pwd
                     var pwdFields = $sections.filter('.current').find('input[type=password]')
                     if (!(pwdFields[1].value == pwdFields[2].value)) {
-                        alert("Password and confirm password should be same!!");
+                        $("#dispError").text("Password and confirm password should be same!!");
                         return;
                     }
                 }
@@ -148,21 +148,16 @@ $(function() {
     $(".demo-form").on('submit', function(e) {
         e.preventDefault();
         e.stopImmediatePropagation();
-        //var form = $(this);
-
         $(".demo-form").parsley().validate();
 
         if ($(".demo-form").parsley().isValid()) {
             // get all the inputs into an array.
             var $inputs = $('.demo-form :input[type=text], .demo-form :input[type=password], .demo-form :input[type=email]');
 
-            // not sure if you wanted this, but I thought I'd add it.
-            // get an associative array of just the values.
             var values = {};
             $.each($('.demo-form').serializeArray(), function(i, field) {
                 values[field.name] = field.value;
             });
-            //console.log(values);
             localStorage.setItem('formData', JSON.stringify(values));
             displayData();
         }

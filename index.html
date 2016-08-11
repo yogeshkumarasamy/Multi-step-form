@@ -21,11 +21,12 @@
 
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
+    <img src="images/logo.png" alt="Logo">
     </nav>
     <div class="container-fluid content">
         <div class="row">
             <div class="col-md-4 left-section">
-                <h1>Registration for Online<br> Services</h1>
+                <h1>Registration for Online<br class="hidden-xs"> Services</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta sequi, est pariatur nemo id, eum nesciunt quo vitae maiores!</p>
             </div>
             <div class="col-md-8 right-section">
@@ -101,7 +102,7 @@
                         <div class="col-md-12">
                             <h1>PERSONAL INFORMATION<span>ALL FIELDS ARE REQUIRED</span></h1>
                         </div>
-
+                        <div id="dispError"></div>
                         <div class="form-group col-md-6">
                             <label for="userid">DESIRED USER ID</label>
                             <input type="text" class="form-control" name="userid" required="">
@@ -181,8 +182,8 @@
 
                     <div class="form-navigation navigation">
 
-                        <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
-                        <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
+                        <button type="button" class="previous btn btn-info pull-left">GO BACK</button>
+                        <button type="button" class="next btn btn-info pull-right">PROCEED</button>
                         <input type="submit" class="btn btn-info pull-right" value="Register Account">
                         <span class="clearfix"></span>
                     </div>
@@ -192,6 +193,7 @@
         </div>
     </div>
     <footer class="footer">
+    &copy; All rights reserved
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -201,5 +203,4 @@
     <script src="https://rawgit.com/guillaumepotier/Parsley.js/2.2.0-rc4/dist/parsley.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
 </html>
