@@ -118,16 +118,27 @@
 	float: left;
 	display: block !important;
 }
-.set.current {
-  display: inherit;
+
+.form-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 1.75s;
+    -moz-transition: opacity 1.75s;
+    -webkit-transition: opacity 1.75s;
 }
-.set, .password {
-	display: block;
+
+.form-section.current {
+    display: block;
+    opacity: 1;
+    transition: opacity 1.75s ease-in-out;
+    -moz-transition: opacity 1.75s ease-in-out;
+    -webkit-transition: opacity 1.75s ease-in-out;
 }
-.set a.disabled {
-	cursor: default;
-	color: #ccc;
-	text-decoration: none;
+
+.form-navigation {
+    transition: all 1.75s ease-in-out;
+    -moz-transition: all 1.75s ease-in-out;
+    -webkit-transition: all 1.75s ease-in-out;
 }
 .footer {
     position: fixed;
@@ -136,7 +147,9 @@
     height: 40px;
     background-color: #c4c4c4;
 }
-
+.table td, .table th {
+	text-align: center;
+}
 
 /*Password checker*/
 .strength {
