@@ -178,7 +178,7 @@ function localCheck() {
     $('.form-section').hide();
     $('.navigation').hide();
     $('#feedback').removeClass("hide");
-    $(".table tbody").append('<tr><th scope="row">1</th><td>'+ retObj.fname +'</td><td>'+ retObj.fname +'</td><td>'+ retObj.email +'</td></tr>');
+    $(".table tbody").append('<tr><td>'+ retObj.fname +'</td><td>'+ retObj.fname +'</td><td>'+ retObj.email +'</td></tr>');
     }
 }
 
